@@ -22,12 +22,10 @@ const STEPS = [
 ];
 
 function CheckboxGroup({
-  name,
   options,
   values,
   onChange,
 }: {
-  name: string;
   options: string[];
   values: string[];
   onChange: (val: string[]) => void;
@@ -89,7 +87,7 @@ export function ClientQuestionnaire() {
   const [submitted, setSubmitted] = useState(false);
   const [answers, setAnswers] = useState<Answers>({
     // Step 0
-    name: "", email: "", company: "", website: "", phone: "",
+    name: "", email: "", company: "", website: "", phone: "", services: [],
     // Step 1
     platform: [], projectName: "", problem: "", targetUser: "", currentSolution: "",
     // Step 2
@@ -116,6 +114,7 @@ export function ClientQuestionnaire() {
       `Company: ${answers.company || "N/A"}`,
       `Website: ${answers.website || "N/A"}`,
       `Phone: ${answers.phone || "N/A"}`,
+      `Services interested in: ${(answers.services as string[]).join(", ") || "N/A"}`,
       "",
       "=== THE PROJECT ===",
       `Platform: ${(answers.platform as string[]).join(", ") || "N/A"}`,
@@ -225,6 +224,14 @@ export function ClientQuestionnaire() {
             <label className={labelClass}>
               Website (if any)
               <input className={inputClass} value={answers.website as string} onChange={(e) => set("website", e.target.value)} placeholder="https://yoursite.com" />
+            </label>
+            <label className={labelClass}>
+              Which services are you interested in? <span className="text-electric">*</span>
+              <CheckboxGroup
+                options={["iOS App Development", "Android App Development", "AI App Development", "Custom Web Application", "SaaS Development", "AI Integration", "UI/UX Design", "Business Consulting", "Not sure yet"]}
+                values={answers.services as string[]}
+                onChange={(v) => set("services", v)}
+              />
             </label>
           </div>
         )}
@@ -472,7 +479,7 @@ export function ClientQuestionnaire() {
             type="button"
             onClick={() => setStep((s) => s + 1)}
             disabled={
-              (step === 0 && (!answers.name || !answers.email)) ||
+              (step === 0 && (!answers.name || !answers.email || !(answers.services as string[]).length)) ||
               (step === 1 && (!answers.problem || !answers.targetUser || !(answers.platform as string[]).length)) ||
               (step === 2 && !answers.mustHaveFeatures) ||
               (step === 4 && !answers.budget)
