@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import { projects } from "@/data/site";
 
 export function ProjectsGrid({ limit }: { limit?: number }) {
@@ -44,18 +44,23 @@ export function ProjectsGrid({ limit }: { limit?: number }) {
             <div className="mt-6 flex flex-wrap gap-3">
               <Link
                 href={project.demoUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="focus-ring inline-flex items-center gap-2 rounded-full bg-electric px-4 py-2 text-sm font-semibold text-white"
               >
                 <ExternalLink className="h-4 w-4" />
-                Demo
+                {"appStore" in project && project.appStore ? "App Store" : "Demo"}
               </Link>
-              <Link
-                href={project.githubUrl}
-                className="focus-ring inline-flex items-center gap-2 rounded-full border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-700 dark:border-white/10 dark:text-slate-200"
-              >
-                <Github className="h-4 w-4" />
-                GitHub
-              </Link>
+              {"githubUrl" in project && project.githubUrl && (
+                <Link
+                  href={project.githubUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="focus-ring inline-flex items-center gap-2 rounded-full border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-700 dark:border-white/10 dark:text-slate-200"
+                >
+                  GitHub
+                </Link>
+              )}
             </div>
           </div>
         </article>

@@ -69,6 +69,32 @@ export const services = [
 
 export const projects = [
   {
+    title: "Quintave Finance Tracker",
+    category: "iOS App",
+    image:
+      "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1200&q=80",
+    description:
+      "A privacy-first personal finance tracker built for iOS. Log income and expenses, visualize spending by category, and export backups — all stored 100% on-device with no accounts required.",
+    technologies: ["Swift", "SwiftUI", "Core Data", "iOS", "App Store"],
+    outcome: "Available on the App Store. All data stays on your device — no servers, no subscriptions.",
+    demoUrl: "https://apps.apple.com/us/app/id6759624736",
+    githubUrl: "",
+    appStore: true
+  },
+  {
+    title: "Priority Task Manager",
+    category: "iOS App",
+    image:
+      "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?auto=format&fit=crop&w=1200&q=80",
+    description:
+      "A clean, focused task manager for iOS that helps you prioritize what matters most. Organize tasks by priority level, set due dates, and stay on top of your day — fast and distraction-free.",
+    technologies: ["Swift", "SwiftUI", "iOS", "App Store"],
+    outcome: "Available on the App Store. Simple, private, and built for daily use.",
+    demoUrl: "https://apps.apple.com/us/app/id6757319158",
+    githubUrl: "",
+    appStore: true
+  },
+  {
     title: "NexusOps AI Command Center",
     category: "AI Operations",
     image:
