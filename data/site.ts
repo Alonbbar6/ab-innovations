@@ -2,14 +2,12 @@ import {
   Bot,
   BrainCircuit,
   BriefcaseBusiness,
-  Code2,
   Cpu,
   Layers3,
   LineChart,
   PanelsTopLeft,
   Smartphone,
   Sparkles,
-  Workflow,
   Zap
 } from "lucide-react";
 
@@ -34,11 +32,6 @@ export const services = [
     title: "Custom Web Applications",
     description: "Secure, scalable web apps built around your business model, users, and operating workflows.",
     icon: PanelsTopLeft
-  },
-  {
-    title: "Automation Systems",
-    description: "Automated operations for sales, support, reporting, onboarding, and internal execution.",
-    icon: Workflow
   },
   {
     title: "SaaS Development",

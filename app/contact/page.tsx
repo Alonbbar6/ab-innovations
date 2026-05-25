@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { CalendarDays, Github, Linkedin, Mail, Twitter } from "lucide-react";
 import { PageHero } from "@/components/ui/page-hero";
-import { ContactForm } from "@/components/sections/contact-form";
+import { ClientQuestionnaire } from "@/components/sections/client-questionnaire";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -46,7 +46,7 @@ export default function ContactPage() {
               ))}
             </div>
           </div>
-          <ContactForm />
+          <ClientQuestionnaire />
         </div>
       </section>
     </>
