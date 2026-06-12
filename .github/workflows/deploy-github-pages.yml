@@ -30,6 +30,9 @@ jobs:
           cp blog.html out/
           cp -r blog out/
           cp -r barber out/
+          cp -r restaurant out/
+          cp -r realtor out/
+          cp -r product out/
           touch out/.nojekyll
 
       - name: Upload artifact

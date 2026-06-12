@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FlowBottle — Stay Hydrated. Stay Sharp.</title>
+  <meta name="description" content="FlowBottle — the premium insulated water bottle that keeps drinks ice cold 24 hours, hot 12 hours. BPA-free, leak-proof. Order now for $49 with free shipping." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="container">
+    <nav class="nav-inner">
+      <a href="#" class="nav-logo">
+        <div class="logo-mark">FB</div>
+        FlowBottle
+      </a>
+      <ul class="nav-links">
+        <li><a href="#features">Features</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+      <a href="#order" class="btn btn-primary nav-cta">Buy Now — $49</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<nav class="mobile-nav" id="mobileNav">
+  <a href="#features" onclick="closeMenu()">Features</a>
+  <a href="#reviews"  onclick="closeMenu()">Reviews</a>
+  <a href="#faq"      onclick="closeMenu()">FAQ</a>
+  <a href="#order" class="btn btn-primary" onclick="closeMenu()">Buy Now — $49</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="container">
+    <div class="hero-inner">
+      <div class="hero-content">
+        <div class="hero-eyebrow">✦ Premium Insulated Bottle</div>
+        <h1 class="hero-headline">Stay Hydrated.<br><span>Stay Sharp.</span></h1>
+        <p class="hero-sub">24-hour cold. 12-hour hot. Zero leaks. The last water bottle you'll ever need — built from premium stainless steel with a double-wall vacuum that actually works.</p>
+        <div class="hero-actions">
+          <a href="#order" class="btn btn-primary btn-lg">Order Now — $49</a>
+        </div>
+        <div class="trust-badges">
+          <span class="badge">🚚 Free Shipping</span>
+          <span class="badge">↩️ 30-Day Returns</span>
+          <span class="badge">💧 BPA Free</span>
+          <span class="badge">🛡️ 1-Year Warranty</span>
+        </div>
+      </div>
+      <div class="hero-image-wrap">
+        <div class="hero-image-bg"></div>
+        <img class="hero-img" src="https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&w=800&q=80" alt="FlowBottle premium insulated water bottle" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROOF BAR -->
+<div class="proof-bar">
+  <div class="container">
+    <div class="proof-bar-inner">
+      <p class="proof-bar-text">Loved by 12,000+ customers</p>
+      <div class="proof-divider"></div>
+      <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+      <p class="proof-bar-sub">4.9 / 5 average rating</p>
+      <div class="proof-divider"></div>
+      <p class="proof-bar-sub">Free shipping on all orders</p>
+    </div>
+  </div>
+</div>
+
+<!-- FEATURES -->
+<section class="features" id="features">
+  <div class="container">
+    <div class="features-header">
+      <span class="section-label">Why FlowBottle</span>
+      <h2 class="section-title">Built for real life.</h2>
+      <p class="section-sub">Every detail engineered so your drink stays perfect — from your morning commute to your evening workout.</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card">
+        <span class="feature-icon">❄️</span>
+        <h3 class="feature-title">24-Hour Cold</h3>
+        <p class="feature-desc">Double-wall vacuum insulation keeps drinks ice cold all day — even in summer heat.</p>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon">🔥</span>
+        <h3 class="feature-title">12-Hour Hot</h3>
+        <p class="feature-desc">Morning coffee stays hot through your afternoon. No more lukewarm disappointments.</p>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon">💧</span>
+        <h3 class="feature-title">Leak-Proof Lid</h3>
+        <p class="feature-desc">Toss it in your bag with zero worry. Triple-seal technology means no spills, ever.</p>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon">♻️</span>
+        <h3 class="feature-title">Eco-Friendly</h3>
+        <p class="feature-desc">BPA-free, reusable, built to last years not months. Good for you, better for the planet.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews" id="reviews">
+  <div class="container">
+    <div class="reviews-header">
+      <span class="section-label">Customer Reviews</span>
+      <h2 class="section-title">Real people. Real results.</h2>
+      <p class="section-sub">Over 12,000 customers trust FlowBottle every single day.</p>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="review-stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+        <p class="review-quote">I've tried every water bottle out there and nothing comes close. My ice literally lasted 30+ hours on a hiking trip. This thing is magic.</p>
+        <div class="review-author"><span class="reviewer-name">Sarah M.</span><span class="verified-badge">✓ Verified Purchase</span></div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+        <p class="review-quote">Best $49 I've ever spent. I threw it in my gym bag, forgot it was open, and nothing spilled. The leak-proof lid is no joke. Absolutely love it.</p>
+        <div class="review-author"><span class="reviewer-name">James T.</span><span class="verified-badge">✓ Verified Purchase</span></div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+        <p class="review-quote">My coffee was still hot when I finished my afternoon meetings. I've bought three as gifts since getting mine. Everyone loves them.</p>
+        <div class="review-author"><span class="reviewer-name">Priya K.</span><span class="verified-badge">✓ Verified Purchase</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ORDER -->
+<section class="order-section" id="order">
+  <div class="container">
+    <div class="order-inner">
+      <div class="order-image-wrap">
+        <span class="order-badge">Most Popular</span>
+        <img class="order-img" src="https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&w=800&q=80" alt="FlowBottle order now" />
+      </div>
+      <div class="order-form">
+        <span class="section-label">Order Now</span>
+        <h2 class="section-title">FlowBottle</h2>
+        <p class="section-sub">Premium insulated stainless steel. Free shipping included.</p>
+        <div class="order-price">$49 <span>$79</span></div>
+
+        <div class="option-group">
+          <p class="option-label">Color: <span id="colorLabel">Midnight Black</span></p>
+          <div class="color-swatches">
+            <button class="swatch swatch-black active" data-color="Midnight Black" onclick="selectColor(this)" aria-label="Midnight Black"></button>
+            <button class="swatch swatch-teal"  data-color="Ocean Teal"    onclick="selectColor(this)" aria-label="Ocean Teal"></button>
+            <button class="swatch swatch-white" data-color="Cloud White"   onclick="selectColor(this)" aria-label="Cloud White"></button>
+          </div>
+        </div>
+
+        <div class="option-group">
+          <p class="option-label">Size</p>
+          <div class="size-options">
+            <button class="size-btn active" onclick="selectSize(this)">20 oz</button>
+            <button class="size-btn"        onclick="selectSize(this)">32 oz</button>
+          </div>
+        </div>
+
+        <div class="option-group">
+          <p class="option-label">Quantity</p>
+          <div class="qty-control">
+            <button class="qty-btn" onclick="changeQty(-1)">−</button>
+            <input class="qty-input" type="number" id="qty" value="1" min="1" max="10" readonly />
+            <button class="qty-btn" onclick="changeQty(1)">+</button>
+          </div>
+        </div>
+
+        <button class="add-to-cart-btn" onclick="addToCart()">Add to Cart — $49</button>
+        <div class="cart-confirm" id="cartConfirm">✓ Added to cart! You're going to love it.</div>
+
+        <div class="payment-icons">
+          <span class="pay-badge">VISA</span>
+          <span class="pay-badge">Mastercard</span>
+          <span class="pay-badge">PayPal</span>
+          <span class="pay-badge">Apple Pay</span>
+        </div>
+        <div class="guarantee-strip">🛡️ 30-day money-back guarantee · 1-year warranty</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="container">
+    <div class="faq-header">
+      <span class="section-label">FAQ</span>
+      <h2 class="section-title">Got questions?</h2>
+      <p class="section-sub">Everything you need to know before you order.</p>
+    </div>
+    <ul class="faq-list">
+      <li class="faq-item">
+        <button class="faq-question">How long does it really keep drinks cold?<span class="faq-icon">+</span></button>
+        <div class="faq-answer">FlowBottle's double-wall vacuum insulation keeps drinks ice cold for up to 24 hours — and in real-world tests, even longer. We tested in 85°F ambient temperatures and still had ice after 26 hours.</div>
+      </li>
+      <li class="faq-item">
+        <button class="faq-question">Is it truly leak-proof?<span class="faq-icon">+</span></button>
+        <div class="faq-answer">Yes. Our triple-seal lid uses a gasket system and a locking mechanism that physically prevents liquid from escaping even when fully upside down and shaken. Just twist shut and you're good to go.</div>
+      </li>
+      <li class="faq-item">
+        <button class="faq-question">What is the bottle made of?<span class="faq-icon">+</span></button>
+        <div class="faq-answer">Food-grade 18/8 stainless steel — 100% BPA-free, phthalate-free, and won't retain flavors or odors. The exterior has a powder-coat finish that resists scratches and keeps its grip when wet.</div>
+      </li>
+      <li class="faq-item">
+        <button class="faq-question">What's your return policy?<span class="faq-icon">+</span></button>
+        <div class="faq-answer">Full 30-day no-questions-asked returns. If you don't love it, email support@flowbottle.com for a free return and full refund. Every bottle also comes with a 1-year manufacturer's warranty.</div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="nav-logo"><div class="logo-mark">FB</div> FlowBottle</div>
+        <p class="footer-tagline">Premium hydration for people who do things. Stay cold. Stay hot. Stay sharp.</p>
+      </div>
+      <div>
+        <p class="footer-col-title">Shop</p>
+        <ul class="footer-links">
+          <li><a href="#order">FlowBottle 20oz</a></li>
+          <li><a href="#order">FlowBottle 32oz</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-col-title">Support</p>
+        <ul class="footer-links">
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#order">Returns</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-col-title">Company</p>
+        <ul class="footer-links">
+          <li><a href="#">About</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 FlowBottle. All rights reserved.</p>
+      <p class="footer-credit">Website by <a href="https://alonbbar6.github.io/ab-innovations/">Bardales Labs</a></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const mobileNav = document.getElementById('mobileNav');
+  hamburger.addEventListener('click', () => { hamburger.classList.toggle('open'); mobileNav.classList.toggle('open'); });
+  function closeMenu() { hamburger.classList.remove('open'); mobileNav.classList.remove('open'); }
+  document.addEventListener('click', (e) => { if (!hamburger.contains(e.target) && !mobileNav.contains(e.target)) closeMenu(); });
+
+  function selectColor(el) {
+    document.querySelectorAll('.swatch').forEach(s => s.classList.remove('active'));
+    el.classList.add('active');
+    document.getElementById('colorLabel').textContent = el.dataset.color;
+  }
+  function selectSize(el) {
+    document.querySelectorAll('.size-btn').forEach(b => b.classList.remove('active'));
+    el.classList.add('active');
+  }
+  function changeQty(delta) {
+    const input = document.getElementById('qty');
+    let val = parseInt(input.value) + delta;
+    input.value = Math.min(10, Math.max(1, val));
+  }
+  function addToCart() {
+    const btn = document.querySelector('.add-to-cart-btn');
+    const confirm = document.getElementById('cartConfirm');
+    btn.textContent = 'Added!';
+    btn.style.background = 'var(--teal)';
+    btn.style.borderColor = 'var(--teal)';
+    confirm.classList.add('show');
+    setTimeout(() => { btn.textContent = 'Add to Cart — $49'; btn.style.background = ''; btn.style.borderColor = ''; }, 2500);
+  }
+</script>
+</body>
+</html>
