@@ -196,16 +196,23 @@
           <form class="contact-form" action="https://formspree.io/f/meewrbpp" method="POST">
             <input required name="name" placeholder="Your Name" />
             <input required type="email" name="email" placeholder="Your Email" />
-            <input required name="phone" placeholder="Phone Number (optional)" />
-            <select name="service">
-              <option>Business website</option>
-              <option>Restaurant website</option>
-              <option>Real estate website</option>
-              <option>E-commerce / product page</option>
-              <option>Mobile app</option>
+            <input name="phone" placeholder="Phone Number" />
+            <input required name="business_name" placeholder="Business Name" />
+            <select name="business_type">
+              <option value="" disabled selected>Type of Business</option>
+              <option>Restaurant / Cafe / Food</option>
+              <option>Barbershop / Salon / Beauty</option>
+              <option>Real Estate</option>
+              <option>Retail / E-commerce</option>
+              <option>Gym / Personal Trainer</option>
+              <option>Contractor / Home Services</option>
+              <option>Healthcare / Medical</option>
               <option>Other</option>
             </select>
-            <textarea required name="message" rows="5" placeholder="Tell me about your business and what you need."></textarea>
+            <textarea required name="services_offered" rows="3" placeholder="What do you sell or offer? (e.g. haircuts, food delivery, home cleaning)"></textarea>
+            <textarea name="pricing" rows="2" placeholder="What do you charge for your main service or product? (approximate is fine)"></textarea>
+            <textarea name="current_website" rows="2" placeholder="Do you have a current website? If yes, paste the link. If no, write 'None'."></textarea>
+            <textarea required name="goal" rows="3" placeholder="What do you need help with? What's the goal of your new website?"></textarea>
             <button class="button primary" type="submit">Send Message</button>
             <p class="form-status" aria-live="polite"></p>
           </form>
