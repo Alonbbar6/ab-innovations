@@ -29,6 +29,7 @@ jobs:
           cp script.js out/
           cp blog.html out/
           cp -r blog out/
+          cp -r barber out/
           touch out/.nojekyll
 
       - name: Upload artifact
