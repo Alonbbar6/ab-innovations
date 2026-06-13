@@ -28,6 +28,7 @@ jobs:
           cp styles.css out/
           cp script.js out/
           cp blog.html out/
+          cp privacy.html out/
           cp -r blog out/
           cp -r barber out/
           cp -r restaurant out/
