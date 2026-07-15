@@ -30,6 +30,7 @@ jobs:
           cp blog.html out/
           cp privacy.html out/
           cp -r blog out/
+          cp -r images out/
           cp -r barber out/
           cp -r restaurant out/
           cp -r realtor out/
