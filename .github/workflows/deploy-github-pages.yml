@@ -29,6 +29,7 @@ jobs:
           cp script.js out/
           cp blog.html out/
           cp privacy.html out/
+          cp favicon.svg out/
           cp -r blog out/
           cp -r images out/
           cp -r barber out/

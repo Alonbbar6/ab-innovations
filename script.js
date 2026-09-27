@@ -39,9 +39,30 @@ document.querySelectorAll(".view-toggle").forEach((group) => {
   });
 });
 
-contactForm.addEventListener("submit", (event) => {
+contactForm.addEventListener("submit", async (event) => {
   event.preventDefault();
-  contactForm.querySelector(".form-status").textContent =
-    "Inquiry captured locally. Connect this form to Netlify Forms, Formspree, or a CRM webhook when ready.";
-  contactForm.reset();
+  const status = contactForm.querySelector(".form-status");
+  const submitButton = contactForm.querySelector('button[type="submit"]');
+
+  status.classList.remove("error");
+  status.textContent = "Sending…";
+  submitButton.disabled = true;
+
+  try {
+    const response = await fetch(contactForm.action, {
+      method: "POST",
+      body: new FormData(contactForm),
+      headers: { Accept: "application/json" },
+    });
+    if (!response.ok) {
+      throw new Error(`Form service responded with ${response.status}`);
+    }
+    status.textContent = "Thanks! Your message is on its way. I'll get back to you soon.";
+    contactForm.reset();
+  } catch (error) {
+    status.classList.add("error");
+    status.textContent = "Something went wrong sending that. Email me directly at alonso.bardales001@mymdc.net.";
+  } finally {
+    submitButton.disabled = false;
+  }
 });
