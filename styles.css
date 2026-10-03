@@ -421,6 +421,18 @@ p {
   font-weight: 800;
 }
 
+.project-card .outcome {
+  border-left: 3px solid var(--blue);
+  padding-left: 12px;
+  color: var(--text);
+  font-weight: 700;
+}
+
+.footer a {
+  color: var(--blue);
+  font-weight: 700;
+}
+
 .store-controls {
   display: grid;
   grid-template-columns: 1fr 220px;

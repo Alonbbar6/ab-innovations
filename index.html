@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Alonso Bardales — Applied AI student and data scientist building AI agents, full-stack apps, and iOS apps. Real projects, real experience."
+      content="Alonso Bardales — AI engineer building AI agents, full-stack AI tools and iOS apps. Open to AI engineering and software roles."
     />
-    <title>Alonso Bardales | Data Scientist & AI Builder</title>
+    <title>Alonso Bardales | Python AI Engineer</title>
     <link rel="preconnect" href="https://images.unsplash.com" />
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -35,19 +35,20 @@
       <section class="hero section">
         <div class="hero-grid">
           <div>
-            <p class="eyebrow">Data Scientist · AI Builder · Miami, FL</p>
+            <p class="eyebrow">Python AI Engineer · LLM Apps · Miami, FL</p>
             <h1>I build AI-powered tools that solve real problems.</h1>
             <p class="hero-copy">
-              I'm Alonso Bardales, an Applied AI student at Miami Dade College. I've built a full-stack AI translation platform, an AI-driven lead-generation console, and two live iOS apps — plus hands-on experience designing AI agents in fintech. I learn by building, then keep building until it works.
+              I'm Alonso Bardales. I design AI agents in fintech at MicroFinance Pro, and I ship my own: an autonomous agent pipeline that published 26 original tracks unattended, a RAG assistant with twelve tools, a lead console tracking 7,500+ businesses, and two iOS apps on the App Store. I'm finishing a B.S. in Applied AI at Miami Dade College.
             </p>
             <div class="actions">
               <a class="button primary" href="#portfolio">See My Projects</a>
-              <a class="button secondary" href="#contact">Get In Touch</a>
+              <a class="button secondary" href="resume.pdf" download>Download Resume (PDF)</a>
             </div>
             <div class="trust-row">
-              <span>Applied AI student</span>
-              <span>2 live iOS apps</span>
-              <span>Fintech AI internships</span>
+              <span>26 tracks published by an AI agent</span>
+              <span>7,500+ leads tracked</span>
+              <span>2 iOS apps on the App Store</span>
+              <span>AI engineering, fintech</span>
             </div>
           </div>
           <div class="hero-panel">
@@ -60,7 +61,7 @@
               <div><i style="width: 92%"></i></div>
             </div>
             <div class="metric">
-              <span>Machine Learning</span>
+              <span>LLM Apps &amp; RAG</span>
               <div><i style="width: 86%"></i></div>
             </div>
             <div class="metric">
@@ -83,8 +84,8 @@
         <div class="card-grid">
           <article class="card">
             <h3>Applied AI Architect & Software Engineer Intern</h3>
-            <p><strong>MicroFinance Pro</strong> · Sep 2025 – Dec 2026 · FinTech</p>
-            <p>Designed and integrated AI agents using Microsoft Azure AI Foundry to automate business processes, and built multilingual translation and AI-driven features. Helped build and improve the web and mobile tools microfinance institutions use to manage loans, savings, and transactions — testing features, troubleshooting issues, and researching and deploying AI solutions for microfinance operations.</p>
+            <p><strong>MicroFinance Pro</strong> · Sep 2025 – Present · FinTech</p>
+            <p>Designed and integrated multi-agent AI workflows with Microsoft Azure AI Foundry to automate business processes, and built multilingual translation and AI-driven features. Helped build and improve the web and mobile tools microfinance institutions use to manage loans, savings, and transactions — testing features, troubleshooting issues, and researching and deploying AI solutions for microfinance operations.</p>
           </article>
           <article class="card">
             <h3>Corporate Trainer Intern</h3>
@@ -106,18 +107,28 @@
           <p>Real tools, built and shipped — not mockups.</p>
         </div>
         <div class="project-grid">
-          <!-- TODO: replace placeholder image with a real Tutorio screenshot -->
-          <article class="project-card screenshot">
-            <img src="images/tutorio-placeholder.png" alt="Tutorio — AI English & Math Tutor (screenshot placeholder)" />
-            <div><span>AI Tool</span><h3>Tutorio — AI English &amp; Math Tutor</h3><p>An AI tutor for English and math, built with Flask and deployed on Render. Focused on the unglamorous parts: layered rate limiting to prevent abuse and runaway API cost, key hygiene, age-gating for COPPA exposure, and prompt-level guardrails to keep the tutor on task.</p><p class="tags">Python · Flask · SQLite · Render · LLM APIs</p><a href="https://tutorio-6nw6.onrender.com/">Live demo ↗</a> · <a href="https://github.com/Alonbbar6/tutorio">Source ↗</a></div>
+          <article class="project-card">
+            <div><span>AI Agent</span><h3>vibeMusicians — Autonomous Agent Pipeline</h3><p>A six-stage AI agent pipeline that researches music trends, invents an artist persona, writes a song, generates audio and cover art, and publishes to SoundCloud. Built on the Anthropic Messages API with bounded web search for cost control, JSON-schema structured outputs, per-stage SQLite checkpointing for crash-safe resume, and OAuth 2.1 rotating refresh tokens persisted across ephemeral CI runs.</p><p class="outcome">Result: ran unattended on a GitHub Actions cron and published 26 original tracks in about two weeks.</p><!-- TODO(Alonso): add a SoundCloud or GitHub link --><p class="tags">Python · Anthropic API · pydantic · SQLite · GitHub Actions</p></div>
           </article>
-          <article class="project-card screenshot">
-            <img src="images/promptlingo-landing.png" alt="PromptLingo landing page — Communicate with the Authority You Deserve. Instantly." />
-            <div><span>AI Tool</span><h3>promptlingo.ai</h3><p>A full-stack AI speech-to-speech translation platform (React/TypeScript, Node.js/Express, PostgreSQL) integrating GPT-4o-mini, Whisper, and ElevenLabs across 6+ languages. AES-GCM 256-bit client-side encryption, JWT auth with HttpOnly cookies, Rust/WebAssembly for client-side text processing, and Stripe billing with usage-based rate limiting.</p><p class="tags">React · Node.js · PostgreSQL · OpenAI · Rust/WASM</p><a href="https://promptlingo.ai/">Live demo ↗</a></div>
+          <article class="project-card">
+            <div><span>AI Agent</span><h3>ai-assistant — Local Claude Agent with RAG</h3><p>A local Claude agent with a twelve-tool function-calling loop. RAG over personal documents using 800-word chunks with overlap, a persistent ChromaDB store with all-MiniLM-L6-v2 embeddings, dedup on re-indexing and relevance-ranked retrieval. Integrates Google Calendar and Gmail over OAuth2, PDF question answering and local Whisper speech-to-text.</p><p class="outcome">Result: one assistant that answers from your own files, calendar and inbox, running locally.</p><!-- TODO(Alonso): add a GitHub link --><p class="tags">Python · Anthropic API · ChromaDB · RAG · Whisper</p></div>
           </article>
           <article class="project-card screenshot">
             <img src="images/vibeleads-lead-console.png" alt="VibeLeads Lead Console showing 7,575 tracked leads with status filters" />
-            <div><span>AI Tool</span><h3>VibeLeads — Lead Console</h3><p>A lead-generation system that finds local businesses without websites. Tracks 7,500+ leads pulled from Google Places and Yelp, auto-classifies them (no website / broken site / has a site), and generates AI research on any prospect in one click.</p><p class="tags">AI Research · Lead Gen · Full-Stack</p><a href="https://vibeleads-demo.onrender.com/ui/">Live demo ↗</a></div>
+            <div><span>AI Tool</span><h3>VibeLeads — Lead Console</h3><p>A lead-generation system that finds local businesses without websites. Tracks 7,500+ leads pulled from Google Places and Yelp, auto-classifies them (no website / broken site / has a site), and generates AI research on any prospect in one click.</p><p class="outcome">Result: 7,500+ local businesses tracked and classified automatically.</p><p class="tags">AI Research · Lead Gen · Full-Stack</p><a href="https://vibeleads-demo.onrender.com/ui/">Live demo ↗</a></div>
+          </article>
+          <article class="project-card screenshot">
+            <img src="images/promptlingo-landing.png" alt="PromptLingo landing page — Communicate with the Authority You Deserve. Instantly." />
+            <div><span>AI Tool</span><h3>promptlingo.ai</h3><p>A full-stack AI speech-to-speech translation platform (React/TypeScript, Node.js/Express, PostgreSQL) integrating GPT-4o-mini, Whisper, and ElevenLabs across 6+ languages. AES-GCM 256-bit client-side encryption, JWT auth with HttpOnly cookies, Rust/WebAssembly for client-side text processing, and Stripe billing with usage-based rate limiting.</p><p class="outcome">Result: live in production, translating speech across 6+ languages with Stripe billing.</p><!-- TODO(Alonso): add users, sessions or paying customers --><p class="tags">React · Node.js · PostgreSQL · OpenAI · Rust/WASM</p><a href="https://promptlingo.ai/">Live demo ↗</a></div>
+          </article>
+          <!-- TODO: replace placeholder image with a real Tutorio screenshot -->
+          <article class="project-card screenshot">
+            <img src="images/tutorio-placeholder.png" alt="Tutorio — AI English & Math Tutor (screenshot placeholder)" />
+            <div><span>AI Tool</span><h3>Tutorio — AI English &amp; Math Tutor</h3><p>An AI tutor for English and math, built with Flask and deployed on Render. Focused on the unglamorous parts: layered rate limiting to prevent abuse and runaway API cost, key hygiene, age-gating for COPPA exposure, and prompt-level guardrails to keep the tutor on task.</p><p class="outcome">Result: live on Render with rate limits and guardrails that keep API cost bounded.</p><!-- TODO(Alonso): add students, sessions or questions answered --><p class="tags">Python · Flask · SQLite · Render · LLM APIs</p><a href="https://tutorio-6nw6.onrender.com/">Live demo ↗</a> · <a href="https://github.com/Alonbbar6/tutorio">Source ↗</a></div>
+          </article>
+          <article class="project-card">
+            <img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=900&q=80" alt="Multiservi Versailles auto repair shop website" />
+            <div><span>Client Website</span><h3>Multiservi Versailles</h3><p>A website for a Miami auto repair shop that had no web presence. I find businesses like this with VibeLeads, then build and launch their site: services, hours, location and click-to-call on mobile.</p><p class="outcome">Result: the shop went from no website to a live, mobile-friendly site.</p><p class="tags">HTML · CSS · Responsive</p><a href="https://alonbbar6.github.io/multiser-versailles/">Live demo ↗</a></div>
           </article>
           <article class="project-card">
             <div class="img-toggle">
@@ -126,26 +137,23 @@
             </div>
             <div>
               <span>Web App</span>
-              <h3>Restroom Sign-In Sheets</h3>
+              <h3>QR Time-Tracking System</h3>
               <div class="view-toggle">
-                <button type="button" class="toggle-btn active" data-view="worker">Custodial View</button>
-                <button type="button" class="toggle-btn" data-view="base">Base View</button>
+                <button type="button" class="toggle-btn active" data-view="worker">Staff View</button>
+                <button type="button" class="toggle-btn" data-view="base">Base Station</button>
               </div>
-              <p>A digital clock-in/clock-out system I built as a prototype for my summer custodial job, replacing the paper sign-in sheet. Custodial staff scan a QR code posted at each restroom station to log their time on the spot. The base station generates the QR codes and tracks sign-ins across all locations — no clipboard, no manual tracking.</p>
+              <p>A QR-based clock-in/clock-out system that replaces paper sign-in sheets. Staff scan the code posted at each station to log their time on the spot; a base station generates the codes and tracks every sign-in across all locations. I spotted the problem on a summer operations job and built the replacement on my own initiative.</p>
+              <!-- TODO(Alonso): add the result, e.g. "Replaced paper logs across X stations" -->
               <p class="tags">Web App · QR Code · Operations</p>
             </div>
           </article>
           <article class="project-card screenshot">
             <img src="images/priority-task-manager-preview.png" alt="Priority Task Manager app preview — Settings, Covey Matrix, and Schedule screens" />
-            <div><span>Mobile App</span><h3>Priority Task Manager</h3><p>A productivity app designed to help users organize tasks by urgency, stay focused, and manage daily priorities with a clean mobile experience.</p><p class="tags">iOS · Productivity · App Store</p><a href="https://apps.apple.com/app/id6757319158">View app ↗</a></div>
+            <div><span>Mobile App</span><h3>Priority Task Manager</h3><p>A productivity app designed to help users organize tasks by urgency, stay focused, and manage daily priorities with a clean mobile experience.</p><p class="outcome">Live on the App Store.</p><!-- TODO(Alonso): add downloads or rating --><p class="tags">iOS · Productivity · App Store</p><a href="https://apps.apple.com/app/id6757319158">View app ↗</a></div>
           </article>
           <article class="project-card screenshot">
             <img src="images/quintave-finance-tracker-preview.png" alt="Quintave Finance Tracker app preview — daily Timeline view and onboarding screen" />
-            <div><span>Mobile App</span><h3>Quintave Finance Tracker</h3><p>A personal finance tracking app built to help users monitor spending, organize financial activity, and stay closer to their money goals.</p><p class="tags">iOS · Finance · App Store</p><a href="https://apps.apple.com/app/id6759624736">View app ↗</a></div>
-          </article>
-          <article class="project-card">
-            <img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=900&q=80" alt="Multiservi Versailles auto repair shop website" />
-            <div><span>Local Business Website</span><h3>Multiservi Versailles</h3><p>A website I built for a Miami auto repair shop that didn't have one — I find local businesses without a web presence and build them a site, like I do with VibeLeads for finding the leads in the first place.</p><p class="tags">HTML · CSS · Responsive</p><a href="https://alonbbar6.github.io/multiser-versailles/">Live demo ↗</a></div>
+            <div><span>Mobile App</span><h3>Quintave Finance Tracker</h3><p>A personal finance tracking app built to help users monitor spending, organize financial activity, and stay closer to their money goals.</p><p class="outcome">Live on the App Store.</p><!-- TODO(Alonso): add downloads or rating --><p class="tags">iOS · Finance · App Store</p><a href="https://apps.apple.com/app/id6759624736">View app ↗</a></div>
           </article>
         </div>
       </section>
@@ -157,16 +165,18 @@
         </div>
         <div class="skills-row">
           <span class="skill-pill">Python</span>
-          <span class="skill-pill">Machine Learning</span>
-          <span class="skill-pill">SwiftUI</span>
-          <span class="skill-pill">Natural Language Processing</span>
-          <span class="skill-pill">AI Agents (Claude, Azure AI Foundry)</span>
-          <span class="skill-pill">Prompt Engineering</span>
-          <span class="skill-pill">Cloud</span>
-          <span class="skill-pill">Microsoft 365</span>
-          <span class="skill-pill">React</span>
-          <span class="skill-pill">Computer Vision</span>
-          <span class="skill-pill">Training &amp; Communication</span>
+          <span class="skill-pill">LLM Applications</span>
+          <span class="skill-pill">Agent Tool Use &amp; Function Calling</span>
+          <span class="skill-pill">Anthropic Messages API</span>
+          <span class="skill-pill">Azure AI Foundry</span>
+          <span class="skill-pill">RAG &amp; Vector Search (ChromaDB)</span>
+          <span class="skill-pill">Structured Outputs</span>
+          <span class="skill-pill">Flask · FastAPI · pydantic</span>
+          <span class="skill-pill">SQL (SQLite, PostgreSQL)</span>
+          <span class="skill-pill">OAuth2 · JWT · AES-GCM</span>
+          <span class="skill-pill">GitHub Actions · Render</span>
+          <span class="skill-pill">React · TypeScript</span>
+          <span class="skill-pill">Swift · SwiftUI</span>
         </div>
       </section>
 
@@ -178,7 +188,7 @@
         <div class="card-grid">
           <article class="card">
             <h3>B.S. Applied Artificial Intelligence</h3>
-            <p><strong>Miami Dade College</strong> · Jun 2023 – Dec 2027</p>
+            <p><strong>Miami Dade College</strong> · Expected graduation Dec 2027</p>
             <p>Phi Theta Kappa Honor Society — Active Member<br />Scholastic Arts and Writing Awards — Gold Key (2022)</p>
           </article>
         </div>
@@ -189,9 +199,10 @@
           <div>
             <p class="eyebrow">Contact</p>
             <h2>Let's talk.</h2>
-            <p>Open to collaborating, internships, or just talking shop about AI and building. Reach out anytime.</p>
+            <p>Open to AI engineering and software roles. I reply within 24 hours.</p>
             <div class="contact-links">
-              <a href="mailto:alonso.bardales001@mymdc.net">alonso.bardales001@mymdc.net</a>
+              <a href="mailto:alonsobardales.apps@gmail.com">alonsobardales.apps@gmail.com</a>
+              <a href="resume.pdf" download>Resume (PDF)</a>
               <a href="tel:+17863401443">(786) 340-1443</a>
               <a href="https://linkedin.com/in/alonso-bardales/">LinkedIn ↗</a>
             </div>
@@ -199,7 +210,7 @@
           <form class="contact-form" action="https://formspree.io/f/meewrbpp" method="POST">
             <input required name="name" placeholder="Your Name" />
             <input required type="email" name="email" placeholder="Your Email" />
-            <textarea required name="message" rows="4" placeholder="What's on your mind?"></textarea>
+            <textarea required name="message" rows="4" placeholder="Role, team, or project you'd like to talk about"></textarea>
             <button class="button primary" type="submit">Send Message</button>
             <p class="form-status" aria-live="polite"></p>
           </form>
@@ -209,7 +220,8 @@
 
     <footer class="footer">
       <strong>Alonso Bardales</strong>
-      <span>AI tools · Automation · iOS Apps · Personal projects</span>
+      <span>AI engineering · Full-stack · iOS apps</span>
+      <a href="websites/">Need a website for your business? →</a>
     </footer>
 
     <script src="script.js"></script>
