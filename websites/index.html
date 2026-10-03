@@ -8,6 +8,13 @@
       content="Websites for Miami auto shops and local businesses, live in 7 days. Starting at $500. English and Spanish. Call or text (786) 340-1443."
     />
     <title>Websites for Miami Shops | Bardales Labs</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Websites for Miami auto shops. Live in 7 days." />
+    <meta property="og:description" content="Starting at $500. English and Spanish. Call or text (786) 340-1443. Bardales Labs." />
+    <meta property="og:url" content="https://alonbbar6.github.io/ab-innovations/websites/" />
+    <meta property="og:image" content="https://alonbbar6.github.io/ab-innovations/websites/og.png" />
+    <meta name="twitter:card" content="summary_large_image" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -44,8 +51,8 @@
           <a href="sms:+17863401443"><span class="en">Prefer texting? Tap here</span><span class="es">¿Prefiere mensaje de texto? Toque aquí</span></a>
         </p>
         <p class="price-tag">
-          <span class="en">Starting at <strong>$500</strong>.</span>
-          <span class="es">Desde <strong>$500</strong>.</span>
+          <span class="en">Starting at <strong>$500</strong> · then $25/month for hosting and small edits. No contract.</span>
+          <span class="es">Desde <strong>$500</strong> · luego $25/mes por hosting y cambios pequeños. Sin contrato.</span>
         </p>
       </section>
 
@@ -131,8 +138,8 @@
             <li><span class="en">Live in 7 days</span><span class="es">Lista en 7 días</span></li>
           </ul>
           <p class="fine">
-            <span class="en">Need more pages, online booking or a logo? Ask me for a quote.</span>
-            <span class="es">¿Necesita más páginas, reservas en línea o un logo? Pídame un precio.</span>
+            <span class="en">After launch: $25/month covers hosting and small edits (prices, hours, photos). No contract. You own your domain (about $12/year). Need more pages or a logo? Ask me for a quote.</span>
+            <span class="es">Después: $25/mes cubre hosting y cambios pequeños (precios, horario, fotos). Sin contrato. El dominio es suyo (unos $12/año). ¿Necesita más páginas o un logo? Pídame un precio.</span>
           </p>
         </div>
         <div class="steps">
@@ -176,25 +183,8 @@
       <span class="es">Llame o escriba al (786) 340-1443</span>
     </a>
 
-    <footer>Bardales Labs · Miami, FL</footer>
+    <footer>Bardales Labs · Miami, FL · <a href="groomers/"><span class="en">Groomer? See the groomer page</span><span class="es">¿Tiene una peluquería canina? Vea esta página</span></a></footer>
 
-    <script>
-      (function () {
-        var root = document.documentElement;
-        function setLang(lang) {
-          root.setAttribute("data-lang", lang);
-          root.setAttribute("lang", lang);
-          try { localStorage.setItem("bl-lang", lang); } catch (e) {}
-        }
-        var param = new URLSearchParams(location.search).get("lang");
-        var saved = null;
-        try { saved = localStorage.getItem("bl-lang"); } catch (e) {}
-        var browser = (navigator.language || "en").slice(0, 2) === "es" ? "es" : "en";
-        setLang(param === "es" || param === "en" ? param : saved || browser);
-        document.querySelector(".lang-toggle").addEventListener("click", function () {
-          setLang(root.getAttribute("data-lang") === "es" ? "en" : "es");
-        });
-      })();
-    </script>
+    <script src="site.js"></script>
   </body>
 </html>
