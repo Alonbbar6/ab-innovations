@@ -39,9 +39,24 @@ document.querySelectorAll(".view-toggle").forEach((group) => {
   });
 });
 
-contactForm.addEventListener("submit", (event) => {
+contactForm.addEventListener("submit", async (event) => {
   event.preventDefault();
-  contactForm.querySelector(".form-status").textContent =
-    "Inquiry captured locally. Connect this form to Netlify Forms, Formspree, or a CRM webhook when ready.";
-  contactForm.reset();
+  const status = contactForm.querySelector(".form-status");
+  const button = contactForm.querySelector("button[type=submit]");
+  button.disabled = true;
+  status.textContent = "Sending...";
+  try {
+    const response = await fetch(contactForm.action, {
+      method: "POST",
+      body: new FormData(contactForm),
+      headers: { Accept: "application/json" },
+    });
+    if (!response.ok) throw new Error(`Formspree returned ${response.status}`);
+    status.textContent = "Thanks! Your message was sent. I reply within 24 hours.";
+    contactForm.reset();
+  } catch (error) {
+    status.textContent = "Something went wrong. Please email alonsobardales.apps@gmail.com or call (786) 340-1443.";
+  } finally {
+    button.disabled = false;
+  }
 });

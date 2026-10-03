@@ -29,8 +29,10 @@ jobs:
           cp script.js out/
           cp blog.html out/
           cp privacy.html out/
+          cp resume.pdf out/
           cp -r blog out/
           cp -r images out/
+          cp -r websites out/
           cp -r barber out/
           cp -r restaurant out/
           cp -r realtor out/
