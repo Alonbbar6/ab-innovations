@@ -8,17 +8,17 @@ export function CTA() {
         <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.28em] text-cyanline dark:text-electric">
-              Build the next system
+              Start with a call
             </p>
             <h2 className="mt-4 max-w-3xl text-3xl font-semibold tracking-tight sm:text-5xl">
-              Turn your software idea into a premium product customers trust.
+              Tell me what eats your team’s time. I’ll tell you what I would automate first.
             </h2>
           </div>
           <Link
             href="/contact"
             className="focus-ring inline-flex items-center justify-center gap-2 rounded-full bg-electric px-6 py-4 text-sm font-semibold text-white transition hover:bg-blue-600"
           >
-            Book a strategy call
+            Book a 20-minute call
             <ArrowRight className="h-4 w-4" />
           </Link>
         </div>

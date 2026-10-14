@@ -12,7 +12,7 @@ export function NewsletterForm() {
         Newsletter
       </h2>
       <p className="mt-4 text-sm leading-7 text-slate-600 dark:text-slate-300">
-        Get notes on AI products, automation, launches, and monetization.
+        Occasional notes on AI agents, automation, and what broke in testing.
       </p>
       <form
         className="mt-4 flex gap-2"

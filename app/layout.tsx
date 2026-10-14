@@ -5,35 +5,36 @@ import { Navbar } from "@/components/layout/navbar";
 import { ThemeProvider } from "@/components/theme/theme-provider";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://abinnovation.com"),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://bardaleslabs.com"),
   title: {
-    default: "AB Innovation | AI Apps, Software Development, and Automation",
-    template: "%s | AB Innovation"
+    default: "Bardales Labs | AI Agents and Automation for Small Businesses",
+    template: "%s | Bardales Labs"
   },
   description:
-    "AB Innovation builds premium AI products, custom software, automation systems, SaaS platforms, and digital tools for ambitious companies.",
+    "Alonso Bardales builds AI voice agents, lead generation pipelines, and custom AI assistants for small businesses in Miami, tested against failure before launch.",
   keywords: [
-    "AI development",
-    "software development",
-    "custom web applications",
-    "SaaS development",
-    "AI automation",
-    "AB Innovation"
+    "AI voice agent",
+    "AI receptionist",
+    "lead generation automation",
+    "CRM automation",
+    "RAG assistant",
+    "Miami AI engineer",
+    "Bardales Labs"
   ],
-  authors: [{ name: "AB Innovation" }],
-  creator: "AB Innovation",
+  authors: [{ name: "Alonso Bardales" }],
+  creator: "Alonso Bardales",
   openGraph: {
-    title: "AB Innovation | Build Your Vision with AI",
+    title: "Bardales Labs | AI agents built to not break",
     description:
-      "Premium AI and software development services for startups, operators, and growth-focused businesses.",
+      "Voice agents, lead pipelines, and workflow automations for small businesses, tested against failure before launch.",
     url: "/",
-    siteName: "AB Innovation",
+    siteName: "Bardales Labs",
     type: "website"
   },
   twitter: {
     card: "summary_large_image",
-    title: "AB Innovation",
-    description: "AI applications, SaaS platforms, automations, and product strategy."
+    title: "Bardales Labs",
+    description: "Voice agents, lead pipelines, and AI assistants for small businesses."
   }
 };
 

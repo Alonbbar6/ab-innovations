@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { Github, Linkedin, Mail, Twitter } from "lucide-react";
-import { navItems } from "@/data/site";
+import { Github, Linkedin, Mail } from "lucide-react";
+import { navItems, siteConfig } from "@/data/site";
 import { NewsletterForm } from "@/components/sections/newsletter-form";
 
 export function Footer() {
@@ -10,29 +10,30 @@ export function Footer() {
         <div>
           <div className="flex items-center gap-3">
             <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-ink text-sm font-black text-white dark:bg-white dark:text-ink">
-              AB
+              BL
             </span>
             <div>
-              <p className="text-sm font-bold tracking-[0.18em]">AB Innovation</p>
+              <p className="text-sm font-bold tracking-[0.18em]">{siteConfig.name}</p>
               <p className="text-xs uppercase tracking-[0.24em] text-slate-500 dark:text-slate-400">
-                AI and software studio
+                AI agents and automation
               </p>
             </div>
           </div>
           <p className="mt-5 max-w-md text-sm leading-7 text-slate-600 dark:text-slate-300">
-            Premium AI applications, SaaS products, automation systems, and software experiences for ambitious
-            businesses.
+            Voice agents, lead pipelines, and workflow automations for small businesses, built and tested in{" "}
+            {siteConfig.location} by {siteConfig.founder}.
           </p>
           <div className="mt-6 flex gap-3">
             {[
-              { icon: Linkedin, label: "LinkedIn", href: "#" },
-              { icon: Twitter, label: "Twitter", href: "#" },
-              { icon: Github, label: "GitHub", href: "#" },
-              { icon: Mail, label: "Email", href: "mailto:hello@abinnovation.com" }
+              { icon: Linkedin, label: "LinkedIn", href: siteConfig.linkedin },
+              { icon: Github, label: "GitHub", href: siteConfig.github },
+              { icon: Mail, label: "Email", href: `mailto:${siteConfig.email}` }
             ].map((item) => (
               <Link
                 key={item.label}
                 href={item.href}
+                target={item.href.startsWith("http") ? "_blank" : undefined}
+                rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
                 className="focus-ring inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-300 text-slate-600 transition hover:border-electric hover:text-electric dark:border-white/10 dark:text-slate-300"
                 aria-label={item.label}
               >
@@ -62,7 +63,7 @@ export function Footer() {
         <NewsletterForm />
       </div>
       <div className="border-t border-slate-200 py-5 text-center text-xs text-slate-500 dark:border-white/10 dark:text-slate-400">
-        © {new Date().getFullYear()} AB Innovation. All rights reserved.
+        © {new Date().getFullYear()} {siteConfig.name}. All rights reserved.
       </div>
     </footer>
   );

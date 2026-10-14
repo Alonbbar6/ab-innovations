@@ -1,21 +1,19 @@
-import {
-  Bot,
-  BrainCircuit,
-  BriefcaseBusiness,
-  Cpu,
-  Layers3,
-  LineChart,
-  PanelsTopLeft,
-  Smartphone,
-  Sparkles,
-  Zap
-} from "lucide-react";
+import { Bot, BrainCircuit, LineChart, PhoneCall, Users, Zap } from "lucide-react";
+
+export const siteConfig = {
+  name: "Bardales Labs",
+  founder: "Alonso Bardales",
+  location: "Miami, FL",
+  email: "hello@bardaleslabs.com",
+  url: "https://bardaleslabs.com",
+  github: "https://github.com/Alonbbar6",
+  linkedin: "https://linkedin.com/in/alonso-bardales/"
+};
 
 export const navItems = [
   { label: "Home", href: "/" },
   { label: "Services", href: "/services" },
-  { label: "Projects", href: "/portfolio" },
-  { label: "Products", href: "/products" },
+  { label: "Work", href: "/portfolio" },
   { label: "Pricing", href: "/pricing" },
   { label: "AI Solutions", href: "/ai-solutions" },
   { label: "About", href: "/about" },
@@ -24,167 +22,91 @@ export const navItems = [
 
 export const services = [
   {
-    title: "AI App Development",
-    description: "Production-grade AI assistants, copilots, workflow agents, and intelligent product experiences.",
+    title: "AI voice and phone agents",
+    description:
+      "Receptionists and outbound callers that answer, book, and route calls. Every agent is stress-tested with scripted callers before it talks to your customers.",
+    icon: PhoneCall
+  },
+  {
+    title: "Lead generation and CRM automation",
+    description:
+      "Pipelines that find prospects, enrich and score them with AI, and keep your CRM current without manual data entry.",
+    icon: Users
+  },
+  {
+    title: "Custom AI assistants (RAG)",
+    description:
+      "Assistants that answer from your own documents, calendar, and inbox, with permission gates and audit logs so they cannot act without approval.",
     icon: BrainCircuit
-  },
-  {
-    title: "Custom Web Applications",
-    description: "Secure, scalable web apps built around your business model, users, and operating workflows.",
-    icon: PanelsTopLeft
-  },
-  {
-    title: "SaaS Development",
-    description: "From MVP to launch-ready SaaS platforms with billing, dashboards, roles, and analytics.",
-    icon: Layers3
-  },
-  {
-    title: "AI Integration",
-    description: "Connect OpenAI, vector search, RAG pipelines, CRM data, and internal tools into one system.",
-    icon: Cpu
-  },
-  {
-    title: "Mobile App Development",
-    description: "Responsive mobile-first products and app experiences designed for speed and retention.",
-    icon: Smartphone
-  },
-  {
-    title: "Business Consulting",
-    description: "Technical strategy, product roadmaps, architecture decisions, and AI adoption planning.",
-    icon: BriefcaseBusiness
-  },
-  {
-    title: "UI/UX Design",
-    description: "Premium interfaces, conversion flows, product design systems, and polished user journeys.",
-    icon: Sparkles
   }
 ];
 
-export const projects = [
+export type Project = {
+  title: string;
+  category: string;
+  image?: string;
+  imageAlt?: string;
+  description: string;
+  technologies: string[];
+  outcome: string;
+  links: { label: string; href: string }[];
+};
+
+export const projects: Project[] = [
+  {
+    title: "robot-runtime",
+    category: "Safe AI agent control",
+    image: "/images/robot-runtime-outage-timeline.png",
+    imageAlt: "Timeline of the runtime holding position through a server outage and resuming",
+    description:
+      "A control runtime that keeps a simulated robot arm working when the AI model behind it sits across an unreliable network. Stale commands are rejected, failures trip a circuit breaker, a protective hold clears itself when valid data returns, and every run is recorded for bit-exact replay. An MCP tool surface lets an agent drive the cell, but refuses to move anything until the cell is armed with a logged reason.",
+    technologies: ["Python", "MCP", "Fault injection", "MCAP replay", "Circuit breaker"],
+    outcome:
+      "100% task success across 25 seeds per condition, including 20% packet loss and 3-second server outages. Ablations removing each safety measure show exactly what breaks without it.",
+    links: [{ label: "Source", href: "https://github.com/Alonbbar6/robot-runtime" }]
+  },
+  {
+    title: "Voice agent stress tester",
+    category: "AI voice agents",
+    description:
+      "An outbound voice bot that role-plays a patient calling an AI phone receptionist, records both sides of the call, transcribes them, and scores the receptionist's behavior. Twilio carries the call and bridges audio straight into the OpenAI Realtime API, speech to speech. A hard-coded destination guard means it can only ever dial the number under test.",
+    technologies: ["Python", "Twilio", "OpenAI Realtime API", "FastAPI", "pytest"],
+    outcome:
+      "Found real defects in a production receptionist, including a case where it disclosed identity details without verifying the caller. 56 automated tests run offline against a fake Realtime server.",
+    links: [{ label: "Source", href: "https://github.com/Alonbbar6/standardized-patient" }]
+  },
+  {
+    title: "VibeLeads",
+    category: "Lead generation pipeline",
+    image: "/images/vibeleads-lead-console.png",
+    imageAlt: "VibeLeads lead console showing tracked local businesses with status filters",
+    description:
+      "The system I use to find my own clients. It pulls Florida small businesses from Google Places and Yelp, checks whether each one has a working website, and classifies them. Celery workers write to Postgres, and Claude scores each prospect and drafts research on demand.",
+    technologies: ["Python", "Claude", "Google Places", "Yelp", "Celery", "Postgres"],
+    outcome: "7,500+ local businesses tracked and classified automatically. Private codebase, demo available on a call.",
+    links: []
+  },
   {
     title: "Quintave Finance Tracker",
-    category: "iOS App",
-    image:
-      "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1200&q=80",
+    category: "iOS app",
+    image: "/images/quintave-finance-tracker-preview.png",
+    imageAlt: "Quintave Finance Tracker daily timeline view and onboarding screen",
     description:
-      "A privacy-first personal finance tracker built for iOS. Log income and expenses, visualize spending by category, and export backups — all stored 100% on-device with no accounts required.",
-    technologies: ["Swift", "SwiftUI", "Core Data", "iOS", "App Store"],
-    outcome: "Available on the App Store. All data stays on your device — no servers, no subscriptions.",
-    demoUrl: "https://apps.apple.com/us/app/id6759624736",
-    githubUrl: "",
-    appStore: true
+      "A privacy-first personal finance tracker for iOS. Log income and expenses, visualize spending by category, and export backups, all stored on-device with no accounts required.",
+    technologies: ["Swift", "SwiftUI", "Core Data"],
+    outcome: "Live on the App Store. No servers, no subscriptions.",
+    links: [{ label: "App Store", href: "https://apps.apple.com/us/app/id6759624736" }]
   },
   {
     title: "Priority Task Manager",
-    category: "iOS App",
-    image:
-      "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?auto=format&fit=crop&w=1200&q=80",
+    category: "iOS app",
+    image: "/images/priority-task-manager-preview.png",
+    imageAlt: "Priority Task Manager settings, priority matrix, and schedule screens",
     description:
-      "A clean, focused task manager for iOS that helps you prioritize what matters most. Organize tasks by priority level, set due dates, and stay on top of your day — fast and distraction-free.",
-    technologies: ["Swift", "SwiftUI", "iOS", "App Store"],
-    outcome: "Available on the App Store. Simple, private, and built for daily use.",
-    demoUrl: "https://apps.apple.com/us/app/id6757319158",
-    githubUrl: "",
-    appStore: true
-  },
-  {
-    title: "NexusOps AI Command Center",
-    category: "AI Operations",
-    image:
-      "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80",
-    description:
-      "A centralized automation dashboard that routes leads, summarizes customer conversations, and triggers operational workflows.",
-    technologies: ["Next.js", "OpenAI", "Postgres", "Tailwind", "Zapier"],
-    outcome: "Reduced manual admin time by 42% for a service business.",
-    demoUrl: "#",
-    githubUrl: "#"
-  },
-  {
-    title: "FinSight SaaS Analytics",
-    category: "SaaS Platform",
-    image:
-      "https://images.unsplash.com/photo-1642790106117-e829e14a795f?auto=format&fit=crop&w=1200&q=80",
-    description:
-      "A subscription analytics workspace with KPI forecasting, cohort reporting, role-based access, and exportable board updates.",
-    technologies: ["TypeScript", "Stripe", "Supabase", "Recharts", "Vercel"],
-    outcome: "Investor-ready reporting for revenue and retention metrics.",
-    demoUrl: "#",
-    githubUrl: "#"
-  },
-  {
-    title: "LumaCare Intake Assistant",
-    category: "AI Product",
-    image:
-      "https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?auto=format&fit=crop&w=1200&q=80",
-    description:
-      "An AI intake and triage tool that collects structured information, prepares summaries, and hands off to staff.",
-    technologies: ["React", "Node.js", "RAG", "HIPAA-ready UX", "Prisma"],
-    outcome: "Improved intake completion rates and staff response quality.",
-    demoUrl: "#",
-    githubUrl: "#"
-  },
-  {
-    title: "Atlas Mobile Commerce",
-    category: "Mobile Experience",
-    image:
-      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
-    description:
-      "A fast mobile-first storefront with product discovery, checkout flow, lifecycle email hooks, and admin controls.",
-    technologies: ["Next.js", "Shopify", "Klaviyo", "Tailwind", "Analytics"],
-    outcome: "Built for high-converting digital product launches.",
-    demoUrl: "#",
-    githubUrl: "#"
-  }
-];
-
-export const products = [
-  {
-    name: "LaunchStack AI",
-    category: "AI Tools",
-    price: "$149",
-    featured: true,
-    description: "A starter kit for AI landing pages, lead capture, and automated follow-up.",
-    tags: ["AI", "Leads", "Templates"]
-  },
-  {
-    name: "SaaS Metrics Dashboard",
-    category: "SaaS Products",
-    price: "$299",
-    featured: true,
-    description: "A polished analytics dashboard template for subscription businesses and founders.",
-    tags: ["Dashboard", "SaaS", "Analytics"]
-  },
-  {
-    name: "Automation Blueprint Pack",
-    category: "Templates",
-    price: "$79",
-    featured: false,
-    description: "Documented automations for CRM, onboarding, reporting, and customer success.",
-    tags: ["Automation", "Docs", "Ops"]
-  },
-  {
-    name: "AI Support Bot Template",
-    category: "AI Tools",
-    price: "$199",
-    featured: false,
-    description: "A customizable AI support assistant interface with knowledge base-ready flows.",
-    tags: ["Support", "AI", "Web App"]
-  },
-  {
-    name: "Premium UI System",
-    category: "Digital Services",
-    price: "$499",
-    featured: false,
-    description: "A conversion-focused design system for high-end SaaS and agency websites.",
-    tags: ["UI/UX", "Brand", "Design"]
-  },
-  {
-    name: "Founder Strategy Sprint",
-    category: "Digital Services",
-    price: "$1,500",
-    featured: true,
-    description: "A focused product and AI roadmap session for founders preparing to build.",
-    tags: ["Consulting", "Roadmap", "AI"]
+      "A focused task manager for iOS. Organize tasks by priority level, set due dates, and stay on top of the day without distractions.",
+    technologies: ["Swift", "SwiftUI"],
+    outcome: "Live on the App Store. Built for daily use.",
+    links: [{ label: "App Store", href: "https://apps.apple.com/us/app/id6757319158" }]
   }
 ];
 
@@ -192,134 +114,94 @@ export const pricingPlans = [
   {
     name: "Starter Build",
     price: "From $2,500",
-    description: "For founders who need a polished website, MVP surface, or automation foundation.",
-    features: ["Strategy call", "Responsive frontend", "Lead capture", "Analytics setup", "Launch checklist"],
+    description: "A single automation or assistant with a clear job: one lead pipeline, one intake bot, one internal tool.",
+    features: ["Scoping call", "Working build", "Test suite", "Deployment", "Handoff docs"],
     cta: "Start a project"
   },
   {
     name: "Growth Product",
     price: "From $7,500",
-    description: "For businesses building AI workflows, SaaS platforms, dashboards, or internal tools.",
-    features: ["Product architecture", "Custom app build", "AI integration", "Admin workflows", "Deployment support"],
+    description: "A voice agent, CRM automation, or RAG assistant integrated with your existing tools and data.",
+    features: ["Workflow mapping", "Custom build", "Tool and CRM integration", "Failure testing", "Launch support"],
     cta: "Plan my build",
     highlighted: true
   },
   {
-    name: "Enterprise AI",
+    name: "Ongoing Partnership",
     price: "Custom",
-    description: "For advanced AI systems, automation programs, and long-term product partnerships.",
-    features: ["Discovery workshop", "Security planning", "Multi-system integration", "Roadmap ownership", "Priority support"],
+    description: "For businesses that want several AI systems built, monitored, and improved over time.",
+    features: ["Discovery workshop", "Permission and audit design", "Multi-system integration", "Monitoring", "Priority support"],
     cta: "Book consultation"
-  }
-];
-
-export const testimonials = [
-  {
-    quote:
-      "AB Innovation turned a rough automation idea into a working product our team uses every day.",
-    name: "Maya Henderson",
-    title: "Operations Director, ScaleForge"
-  },
-  {
-    quote:
-      "The strategy, interface quality, and build speed felt like working with a senior product team.",
-    name: "Jordan Lee",
-    title: "Founder, Northstar Labs"
-  },
-  {
-    quote:
-      "We needed more than a website. We got a premium digital sales engine with AI built into the workflow.",
-    name: "Ari Campbell",
-    title: "CEO, Vanta Growth"
   }
 ];
 
 export const faqs = [
   {
-    question: "How fast can AB Innovation launch a project?",
+    question: "How fast can Bardales Labs launch a project?",
     answer:
-      "Focused landing pages can launch in 1-2 weeks. Custom applications, SaaS products, and AI systems depend on scope, integrations, and data readiness."
+      "A focused automation or assistant usually takes 2 to 4 weeks. Voice agents and multi-system integrations depend on scope, the tools involved, and how clean your data is."
   },
   {
     question: "Can you connect AI to our existing business tools?",
     answer:
-      "Yes. We can integrate AI with CRMs, forms, spreadsheets, databases, APIs, documents, and internal dashboards."
+      "Yes. I integrate with CRMs, phone systems, calendars, email, spreadsheets, databases, and internal dashboards through their APIs."
   },
   {
-    question: "Do you build products that can be sold online?",
+    question: "What does testing against failure mean?",
     answer:
-      "Yes. AB Innovation can create storefronts, SaaS apps, templates, digital product systems, and checkout-ready experiences."
+      "Before an agent goes live I run it against scripted bad inputs: dropped calls, confused callers, missing data, and slow or failing APIs. You get the test results, not just a demo."
   },
   {
-    question: "Is the website ready for a CMS later?",
-    answer:
-      "The content is organized in data modules and reusable components so it can be migrated to a CMS like Sanity, Contentful, or Strapi."
+    question: "Who owns the code?",
+    answer: "You do. Every build is delivered with source, documentation, and the test suite, so you are never locked in."
   }
 ];
 
 export const stats = [
-  { value: "8+", label: "service categories" },
-  { value: "24/7", label: "automation mindset" },
-  { value: "AI-first", label: "product strategy" },
-  { value: "100%", label: "responsive builds" }
+  { value: "2", label: "iOS apps on the App Store" },
+  { value: "56", label: "automated tests on my voice agent" },
+  { value: "100%", label: "task success under 20% packet loss" },
+  { value: "7,500+", label: "leads tracked by my pipeline" }
 ];
 
 export const processSteps = [
   {
     title: "Discover",
-    description: "Clarify the offer, users, workflows, revenue model, and AI opportunities."
+    description: "Clarify the job the system needs to do, who uses it, what tools it touches, and what failure would cost."
   },
   {
     title: "Design",
-    description: "Map the product experience, user flows, technical architecture, and launch plan."
+    description: "Map the workflow, the permissions the AI gets, the handoffs to humans, and what gets logged."
   },
   {
     title: "Build",
-    description: "Develop the frontend, backend integrations, AI logic, automations, and admin workflows."
+    description: "Develop the agent or automation, the integrations, and the test suite that proves it holds up."
   },
   {
     title: "Launch",
-    description: "Deploy, measure, improve, and prepare the system for growth or monetization."
+    description: "Deploy, monitor the first weeks of real use, and hand over source and documentation."
   }
 ];
 
 export const aiSolutionCards = [
   {
-    title: "AI Customer Concierge",
-    description: "Qualify leads, answer questions, summarize calls, and hand off clean context to your team.",
+    title: "AI phone receptionist",
+    description: "Answer calls, qualify leads, book appointments, and hand off clean context to your team.",
     icon: Bot
   },
   {
-    title: "Internal Knowledge Engine",
-    description: "Turn SOPs, docs, policies, and data into a searchable assistant for your employees.",
+    title: "Internal knowledge assistant",
+    description: "Turn SOPs, documents, policies, and data into a searchable assistant for your employees.",
     icon: BrainCircuit
   },
   {
-    title: "Revenue Automation",
-    description: "Automate follow-up, proposals, reporting, reminders, and pipeline movement.",
+    title: "Pipeline automation",
+    description: "Automate prospecting, follow-up, reminders, and CRM updates so nothing slips through.",
     icon: LineChart
   },
   {
-    title: "Product Copilots",
-    description: "Add intelligent recommendations, generation, search, and decision support inside your app.",
+    title: "Agents with guardrails",
+    description: "Permission-gated actions, audit logs, and automatic recovery for agents that touch real systems.",
     icon: Zap
-  }
-];
-
-export const blogPosts = [
-  {
-    title: "How AI Can Remove 10 Hours of Weekly Admin Work",
-    category: "Automation",
-    date: "Coming soon"
-  },
-  {
-    title: "What Founders Should Know Before Building a SaaS MVP",
-    category: "Product",
-    date: "Coming soon"
-  },
-  {
-    title: "The Modern Website Is a Sales System, Not a Brochure",
-    category: "Growth",
-    date: "Coming soon"
   }
 ];

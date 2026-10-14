@@ -5,7 +5,7 @@ import { CTA } from "@/components/sections/cta";
 
 export const metadata: Metadata = {
   title: "Portfolio",
-  description: "Portfolio and case study layouts for AB Innovation AI, SaaS, automation, and web application projects."
+  description: "Case studies from Bardales Labs: a fault-tested robot control runtime, a voice agent stress tester, a lead generation pipeline, and two iOS apps."
 };
 
 export default function PortfolioPage() {
@@ -13,8 +13,8 @@ export default function PortfolioPage() {
     <>
       <PageHero
         eyebrow="Portfolio"
-        title="Case-study ready project showcases."
-        description="Present completed builds with visuals, measurable outcomes, technologies, demos, source links, and client-ready narrative structure."
+        title="Work that was tested against failure."
+        description="Real systems with public source where possible, the numbers they produced, and the bugs the tests caught along the way."
       />
       <section className="px-5 py-20 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">

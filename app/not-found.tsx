@@ -7,7 +7,7 @@ export default function NotFound() {
       <p className="text-sm font-semibold uppercase tracking-[0.28em] text-electric">404</p>
       <h1 className="mt-4 text-4xl font-semibold tracking-tight sm:text-6xl">Signal not found.</h1>
       <p className="mt-5 max-w-xl text-base leading-7 text-slate-600 dark:text-slate-300">
-        The page you requested is offline or has moved. Return to the AB Innovation command center.
+        The page you requested is offline or has moved. Head back to the Bardales Labs home page.
       </p>
       <Link
         href="/"

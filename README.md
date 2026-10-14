@@ -1,6 +1,6 @@
-# AB Innovation
+# Bardales Labs
 
-Simple static website for AB Innovation, an AI and software development studio.
+Simple static website for Bardales Labs, Alonso Bardales’ AI agents and automation practice.
 
 ## Architecture
 

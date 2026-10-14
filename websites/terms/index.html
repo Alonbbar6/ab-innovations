@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="The one-page service agreement for Bardales Labs websites: $79 a month, 12-month minimum, you own your domain and content. In English and Spanish."
+    />
+    <title>Service Agreement | Bardales Labs</title>
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Bardales Labs service agreement, in plain words" />
+    <meta property="og:description" content="One page. $79 a month, 12-month minimum, you own the domain and the content. English and Spanish." />
+    <meta property="og:url" content="https://alonbbar6.github.io/ab-innovations/websites/terms/" />
+    <meta property="og:image" content="https://alonbbar6.github.io/ab-innovations/websites/og.png" />
+    <link rel="stylesheet" href="../styles.css" />
+    <style>
+      .agreement { max-width: 760px; }
+      .agreement .hero { padding-bottom: 28px; }
+      .agreement h1 { font-size: clamp(30px, 6vw, 44px); }
+      .meta { margin: 0 0 8px; color: var(--muted); font-size: 15px; }
+      .points { margin: 0; padding: 0; list-style: none; counter-reset: pt; }
+      .points li {
+        position: relative;
+        counter-increment: pt;
+        padding: 18px 0 18px 52px;
+        border-top: 1px solid var(--line);
+      }
+      .points li::before {
+        content: counter(pt);
+        position: absolute;
+        left: 0;
+        top: 18px;
+        display: grid;
+        width: 36px;
+        height: 36px;
+        place-items: center;
+        border-radius: 50%;
+        background: var(--text);
+        color: #fff;
+        font-weight: 800;
+      }
+      .points h2 { font-size: 20px; margin: 0 0 6px; }
+      .points p { margin: 0; color: var(--muted); font-size: 17px; }
+      .points p + p { margin-top: 8px; }
+      .points strong { color: var(--text); }
+      .accept {
+        margin: 32px 0 0;
+        border: 2px solid var(--line);
+        border-radius: var(--radius);
+        padding: 20px;
+        background: var(--panel);
+      }
+      .accept p { margin: 0 0 10px; color: var(--muted); font-size: 16px; }
+      .accept p:last-child { margin-bottom: 0; }
+      .sig { display: none; grid-template-columns: 1fr 1fr; gap: 32px; margin-top: 28px; }
+      .sig div { border-top: 1px solid var(--text); padding-top: 6px; font-size: 14px; color: var(--muted); }
+      .sig div b { display: block; color: var(--text); }
+      .print-btn {
+        border: 2px solid var(--text);
+        border-radius: 999px;
+        padding: 8px 16px;
+        background: transparent;
+        color: var(--text);
+        font: inherit;
+        font-size: 15px;
+        font-weight: 700;
+        cursor: pointer;
+      }
+      .actions { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-top: 16px; }
+      @media print {
+        body { padding-bottom: 0; font-size: 12px; background: #fff; }
+        .top, .sticky-call, footer, .actions, .founding-note { display: none !important; }
+        .agreement .hero { padding: 0 0 10px; }
+        .agreement h1 { font-size: 22px; margin-bottom: 6px; }
+        .points li { padding: 8px 0 8px 36px; break-inside: avoid; }
+        .points li::before { width: 24px; height: 24px; top: 8px; font-size: 12px; }
+        .points h2 { font-size: 13px; margin-bottom: 2px; }
+        .points p { font-size: 12px; }
+        .accept { margin-top: 12px; padding: 12px; }
+        .sig { display: grid; }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="top">
+      <div class="brand">
+        <strong>Bardales Labs</strong>
+        <span class="en">Websites for Miami small businesses</span>
+        <span class="es">Páginas web para negocios en Miami</span>
+      </div>
+      <button class="lang-toggle" type="button" aria-label="Cambiar idioma / Change language">
+        <span class="en">Español</span><span class="es">English</span>
+      </button>
+    </header>
+
+    <main class="agreement">
+      <section class="hero">
+        <p class="kicker">
+          <span class="en">Service agreement · One page · Plain words</span>
+          <span class="es">Acuerdo de servicio · Una página · Palabras simples</span>
+        </p>
+        <h1>
+          <span class="en">The terms for your website.</span>
+          <span class="es">Las condiciones de su página web.</span>
+        </h1>
+        <p class="meta">
+          <span class="en">Last updated October 5, 2026. This is the whole agreement. There is no fine print anywhere else.</span>
+          <span class="es">Actualizado el 5 de octubre de 2026. Este es el acuerdo completo. No hay letra pequeña en ningún otro lado.</span>
+        </p>
+        <div class="actions">
+          <button class="print-btn" type="button" onclick="window.print()">
+            <span class="en">Print or save as PDF</span><span class="es">Imprimir o guardar en PDF</span>
+          </button>
+          <a href="../"><span class="en">← Back to the offer</span><span class="es">← Volver a la oferta</span></a>
+        </div>
+      </section>
+
+      <ol class="points">
+        <li>
+          <h2><span class="en">Who this is between</span><span class="es">Entre quiénes es</span></h2>
+          <p>
+            <span class="en"><strong>Bardales Labs</strong> (Alonso Bardales, Kendall, Miami, FL, (786) 340-1443) and <strong>the business named at checkout</strong>, represented by its owner. "I" and "me" below mean Bardales Labs. "You" means the business and its owner.</span>
+            <span class="es"><strong>Bardales Labs</strong> (Alonso Bardales, Kendall, Miami, FL, (786) 340-1443) y <strong>el negocio indicado al momento del pago</strong>, representado por su dueño. Abajo, "yo" y "me" se refieren a Bardales Labs. "Usted" se refiere al negocio y a su dueño.</span>
+          </p>
+        </li>
+
+        <li>
+          <h2><span class="en">What you get</span><span class="es">Lo que recibe</span></h2>
+          <p>
+            <span class="en">A one-page website in English and Spanish, built from the template for your trade with your name, hours, services, prices and photos. Your domain name, hosting and security certificate. Tap-to-call, text and WhatsApp buttons, and directions on Google Maps. A cleanup of your Google Business Profile. <strong>One edit a month</strong> (hours, prices, photos, text), done within 3 business days of your text or email. A short monthly note with your visits and calls from Google.</span>
+            <span class="es">Una página web de una sola página en inglés y español, hecha con la plantilla de su oficio, con su nombre, horario, servicios, precios y fotos. Su dominio, el hosting y el certificado de seguridad. Botones para llamar, enviar texto y WhatsApp con un toque, y cómo llegar en Google Maps. Una limpieza de su Perfil de Negocio de Google. <strong>Un cambio al mes</strong> (horario, precios, fotos, textos), listo en 3 días hábiles después de su texto o correo. Una nota mensual corta con sus visitas y llamadas desde Google.</span>
+          </p>
+          <p>
+            <span class="en"><strong>Not included:</strong> custom design. Every site uses a proven template. That is what makes the price and the one-week launch possible.</span>
+            <span class="es"><strong>No incluye:</strong> diseño personalizado. Cada página usa una plantilla probada. Eso es lo que hace posible el precio y la entrega en una semana.</span>
+          </p>
+        </li>
+
+        <li>
+          <h2><span class="en">Price and billing</span><span class="es">Precio y cobro</span></h2>
+          <p>
+            <span class="en"><strong>$79 a month</strong> (or <strong>$49 a month</strong> for founding clients, or <strong>$790 for a full year</strong>), charged automatically to the card you put on file. <strong>$0 is charged the day you sign up.</strong> The first charge happens the week your site goes live, about 7 days after you accept this agreement. After that, the same amount on the same day each month. If a launch is delayed on my side, I move the first charge back to match.</span>
+            <span class="es"><strong>$79 al mes</strong> (o <strong>$49 al mes</strong> para clientes fundadores, o <strong>$790 por el año completo</strong>), cobrados automáticamente a la tarjeta que usted registra. <strong>El día que se inscribe se cobra $0.</strong> El primer cobro ocurre la semana en que su página sale al aire, unos 7 días después de aceptar este acuerdo. Después, el mismo monto el mismo día de cada mes. Si el lanzamiento se atrasa por mi parte, muevo el primer cobro para que coincida.</span>
+          </p>
+        </li>
+
+        <li>
+          <h2><span class="en">How long it lasts</span><span class="es">Cuánto dura</span></h2>
+          <p>
+            <span class="en"><strong>12 months minimum</strong>, counted from the first charge. After the 12 months it continues month to month, and either of us can end it with <strong>30 days' notice</strong> by text or email. Monthly fees already paid are not refunded. If you want out during the first 12 months, text me and we will talk. I will not take you to court, but the site comes down when payments stop (point 8), and your domain still goes with you (point 7).</span>
+            <span class="es"><strong>Mínimo 12 meses</strong>, contados desde el primer cobro. Después de los 12 meses sigue mes a mes, y cualquiera de los dos puede terminarlo con <strong>30 días de aviso</strong> por texto o correo. Las cuotas mensuales ya pagadas no se devuelven. Si quiere salirse durante los primeros 12 meses, escríbame y hablamos. No lo voy a demandar, pero la página se baja cuando se dejan de hacer los pagos (punto 8), y su dominio igual se va con usted (punto 7).</span>
+          </p>
+        </li>
+
+        <li>
+          <h2><span class="en">Founding clients</span><span class="es">Clientes fundadores</span></h2>
+          <p>
+            <span class="en">The first 3 clients pay <strong>$49 a month, locked for 12 months</strong>. In return, you agree to give a short honest testimonial once the site is live, to let me show your site as an example to other businesses, and to refer two businesses you know if you are happy with the work. After 12 months the price moves to the regular $79, with 30 days' written notice.</span>
+            <span class="es">Los primeros 3 clientes pagan <strong>$49 al mes, fijo por 12 meses</strong>. A cambio, usted acepta dar un testimonio corto y honesto cuando la página esté al aire, dejarme mostrar su página como ejemplo a otros negocios, y recomendar a dos negocios que conozca si está contento con el trabajo. Después de 12 meses el precio pasa al regular de $79, con 30 días de aviso por escrito.</span>
+          </p>
+        </li>
+
+        <li>
+          <h2><span class="en">Extras, only if you ask</span><span class="es">Extras, solo si los pide</span></h2>
+          <p>
+            <span class="en">Extra edit in the same month: <strong>$25</strong>. Extra page (menu, services, gallery): <strong>$99</strong>. Simple logo: <strong>$99</strong>. Rush launch within 24 hours: <strong>$99</strong>. AI chat or FAQ assistant on your site: <strong>$29 a month</strong>, added to your subscription. I will always confirm the price with you by text before I charge for an extra.</span>
+            <span class="es">Cambio extra en el mismo mes: <strong>$25</strong>. Página extra (menú, servicios, galería): <strong>$99</strong>. Logo sencillo: <strong>$99</strong>. Lanzamiento urgente en 24 horas: <strong>$99</strong>. Asistente de chat o preguntas con IA en su página: <strong>$29 al mes</strong>, sumado a su suscripción. Siempre le confirmo el precio por texto antes de cobrar un extra.</span>
+          </p>
+        </li>
+
+        <li>
+          <h2><span class="en">What is yours and what is mine</span><span class="es">Qué es suyo y qué es mío</span></h2>
+          <p>
+            <span class="en"><strong>Yours:</strong> the domain name, registered in your name, and all of your content: your business name, text, photos, logo and prices. If we part ways, the domain goes with you and I will help you transfer it. I will never hold your domain back for any reason. <strong>Mine:</strong> the template, the design and the code. You are licensed to use them while you are a client. They are not sold or transferred.</span>
+            <span class="es"><strong>Suyo:</strong> el dominio, registrado a su nombre, y todo su contenido: el nombre de su negocio, textos, fotos, logo y precios. Si nos separamos, el dominio se va con usted y le ayudo a transferirlo. Nunca retendré su dominio por ningún motivo. <strong>Mío:</strong> la plantilla, el diseño y el código. Usted tiene licencia para usarlos mientras sea cliente. No se venden ni se transfieren.</span>
+          </p>
+        </li>
+
+        <li>
+          <h2><span class="en">If a payment fails</span><span class="es">Si falla un pago</span></h2>
+          <p>
+            <span class="en">If a charge does not go through, I text you the same day with a link to update your card. If it is not fixed within <strong>15 days</strong>, the site is paused and shows a short "coming back soon" page. After <strong>30 days</strong>, the site is taken down. Your domain is still yours. Pay what is owed within those 30 days and the site comes right back, nothing lost.</span>
+            <span class="es">Si un cobro no pasa, le escribo el mismo día con un enlace para actualizar su tarjeta. Si no se arregla en <strong>15 días</strong>, la página se pausa y muestra un aviso corto de "volvemos pronto". Después de <strong>30 días</strong>, la página se da de baja. Su dominio sigue siendo suyo. Si paga lo pendiente dentro de esos 30 días, la página vuelve de inmediato, sin perder nada.</span>
+          </p>
+        </li>
+
+        <li>
+          <h2><span class="en">What I promise and what I don't</span><span class="es">Lo que prometo y lo que no</span></h2>
+          <p>
+            <span class="en"><strong>I promise</strong> to keep your site online, keep the domain and certificate renewed, do your monthly edit within 3 business days, and fix any problem I caused at no charge. <strong>I do not promise</strong> a position on Google, a number of visits or calls, or new customers. Those depend on your reviews, your competition and your neighborhood. I also cannot control outages at Google or the hosting provider, though I will respond to them right away. My total responsibility to you under this agreement is limited to the fees you paid me in the previous 12 months.</span>
+            <span class="es"><strong>Prometo</strong> mantener su página en línea, mantener el dominio y el certificado renovados, hacer su cambio mensual en 3 días hábiles, y arreglar sin costo cualquier problema que yo haya causado. <strong>No prometo</strong> una posición en Google, un número de visitas o llamadas, ni clientes nuevos. Eso depende de sus reseñas, su competencia y su barrio. Tampoco puedo controlar las caídas de Google o del proveedor de hosting, aunque responderé de inmediato. Mi responsabilidad total con usted bajo este acuerdo se limita a las cuotas que me pagó en los últimos 12 meses.</span>
+          </p>
+        </li>
+
+        <li>
+          <h2><span class="en">How we agree</span><span class="es">Cómo lo aceptamos</span></h2>
+          <p>
+            <span class="en">Checking "I accept the terms" at checkout and entering your card is your signature. It is as binding as ink, under U.S. and Florida law on electronic signatures. For founding clients I also send this same page as a PDF to sign electronically, and you get a copy. Florida law applies. If a disagreement comes up, we talk first, in person or by phone, before anything else.</span>
+            <span class="es">Marcar "Acepto las condiciones" al momento del pago e ingresar su tarjeta es su firma. Vale igual que la tinta, según las leyes de Estados Unidos y Florida sobre firmas electrónicas. A los clientes fundadores también les envío esta misma página en PDF para firmar electrónicamente, y usted recibe una copia. Aplica la ley de Florida. Si surge un desacuerdo, primero hablamos, en persona o por teléfono, antes que cualquier otra cosa.</span>
+          </p>
+        </li>
+      </ol>
+
+      <div class="accept">
+        <p>
+          <span class="en"><strong>Questions before you accept?</strong> Call or text me at (786) 340-1443, or email <a href="mailto:alonsobardales.apps@gmail.com">alonsobardales.apps@gmail.com</a>. I answer my own phone, in English or Spanish.</span>
+          <span class="es"><strong>¿Preguntas antes de aceptar?</strong> Llame o escriba al (786) 340-1443, o escriba a <a href="mailto:alonsobardales.apps@gmail.com">alonsobardales.apps@gmail.com</a>. Contesto mi propio teléfono, en inglés o en español.</span>
+        </p>
+        <p class="founding-note">
+          <span class="en">Need this in Spanish? Tap "Español" at the top, or open <a href="?lang=es">this page in Spanish</a>.</span>
+          <span class="es">¿Lo necesita en inglés? Toque "English" arriba, o abra <a href="?lang=en">esta página en inglés</a>.</span>
+        </p>
+        <div class="sig" aria-hidden="true">
+          <div><b>Bardales Labs</b><span class="en">Alonso Bardales · Signature · Date</span><span class="es">Alonso Bardales · Firma · Fecha</span></div>
+          <div><b><span class="en">Business owner</span><span class="es">Dueño del negocio</span></b><span class="en">Name · Business · Signature · Date</span><span class="es">Nombre · Negocio · Firma · Fecha</span></div>
+        </div>
+      </div>
+    </main>
+
+    <footer>Bardales Labs · Kendall, Miami, FL · <a href="../"><span class="en">Back to the offer</span><span class="es">Volver a la oferta</span></a></footer>
+
+    <script src="../site.js"></script>
+  </body>
+</html>

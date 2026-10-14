@@ -16,7 +16,7 @@ export default function AiSolutionsPage() {
       <PageHero
         eyebrow="AI Solutions"
         title="Deploy AI where it creates measurable business leverage."
-        description="AB Innovation designs AI workflows that connect to your data, tools, customers, and team so automation becomes a practical advantage."
+        description="I design AI workflows that connect to your phone system, CRM, documents, and team, with the permissions and logging decided up front."
         primaryCta="Design my AI system"
       />
       <section className="px-5 py-20 sm:px-6 lg:px-8">
@@ -40,7 +40,7 @@ export default function AiSolutionsPage() {
               Strategy, security, and UX before automation goes live.
             </h2>
             <p className="mt-5 text-base leading-8 text-slate-600 dark:text-slate-300">
-              The right AI system needs clean inputs, clear handoffs, careful permissions, and measurable outcomes. AB Innovation plans the workflow before adding intelligence.
+              The right AI system needs clean inputs, clear handoffs, careful permissions, and measurable outcomes. I plan the workflow and the failure cases before adding intelligence.
             </p>
           </div>
           <div className="rounded-3xl border border-slate-200 bg-white p-6 dark:border-white/10 dark:bg-graphite">

@@ -7,7 +7,7 @@ import { pricingPlans } from "@/data/site";
 
 export const metadata: Metadata = {
   title: "Pricing",
-  description: "Flexible pricing for AB Innovation AI, software, SaaS, automation, and consulting engagements."
+  description: "Starting prices for AI voice agents, lead generation automation, and custom AI assistants from Bardales Labs."
 };
 
 export default function PricingPage() {
@@ -15,8 +15,8 @@ export default function PricingPage() {
     <>
       <PageHero
         eyebrow="Pricing"
-        title="Engagements for premium builds and serious launches."
-        description="Transparent starting points for websites, MVPs, automations, SaaS products, and enterprise AI systems."
+        title="Clear starting points, scoped on a call."
+        description="Every engagement includes the build, the test suite, deployment, and full ownership of the source."
       />
       <section className="px-5 py-20 sm:px-6 lg:px-8">
         <div className="mx-auto grid max-w-7xl gap-6 lg:grid-cols-3">

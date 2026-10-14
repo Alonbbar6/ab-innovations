@@ -22,10 +22,12 @@ const STEPS = [
 ];
 
 function CheckboxGroup({
+  name,
   options,
   values,
   onChange,
 }: {
+  name?: string;
   options: string[];
   values: string[];
   onChange: (val: string[]) => void;
@@ -34,7 +36,7 @@ function CheckboxGroup({
     onChange(values.includes(opt) ? values.filter((v) => v !== opt) : [...values, opt]);
   };
   return (
-    <div className="flex flex-wrap gap-2">
+    <div className="flex flex-wrap gap-2" data-group={name}>
       {options.map((opt) => (
         <button
           key={opt}
@@ -432,13 +434,13 @@ export function ClientQuestionnaire() {
             <label className={labelClass}>
               Who will maintain the app after delivery?
               <RadioGroup
-                options={["I will handle it", "AB Innovation ongoing", "My own developer", "TBD"]}
+                options={["I will handle it", "Bardales Labs ongoing", "My own developer", "TBD"]}
                 value={answers.maintenance as string}
                 onChange={(v) => set("maintenance", v)}
               />
             </label>
             <label className={labelClass}>
-              Do you want ongoing support from AB Innovation?
+              Do you want ongoing support from Bardales Labs?
               <RadioGroup
                 options={["Yes", "No", "Maybe — discuss pricing"]}
                 value={answers.ongoingSupport as string}
