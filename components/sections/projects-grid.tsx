@@ -1,4 +1,6 @@
 import Image from "next/image";
+
+import { assetPath } from "@/lib/asset-path";
 import Link from "next/link";
 import { ExternalLink, Lock } from "lucide-react";
 import { projects } from "@/data/site";
@@ -16,7 +18,7 @@ export function ProjectsGrid({ limit }: { limit?: number }) {
           <div className="relative aspect-[16/10] overflow-hidden bg-slate-100 dark:bg-ink">
             {project.image ? (
               <Image
-                src={project.image}
+                src={assetPath(project.image)}
                 alt={project.imageAlt ?? `${project.title} preview`}
                 fill
                 sizes="(min-width: 1024px) 50vw, 100vw"

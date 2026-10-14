@@ -1,4 +1,6 @@
 import Image from "next/image";
+
+import { assetPath } from "@/lib/asset-path";
 import Link from "next/link";
 import { ArrowRight, CheckCircle2, MapPin } from "lucide-react";
 import { siteConfig, stats } from "@/data/site";
@@ -59,7 +61,7 @@ export function Hero() {
               </div>
               <div className="relative aspect-[4/3]">
                 <Image
-                  src="/images/vibeleads-lead-console.png"
+                  src={assetPath("/images/vibeleads-lead-console.png")}
                   alt="VibeLeads lead console showing tracked local businesses with status filters"
                   fill
                   priority
