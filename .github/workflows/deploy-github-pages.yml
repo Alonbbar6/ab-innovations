@@ -21,22 +21,30 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Prepare static files
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install
+        run: npm ci
+
+      # next.config.ts sets output: "export" and derives the /ab-innovations
+      # basePath from GITHUB_REPOSITORY, so this writes the whole site to out/.
+      - name: Build the Next.js site
+        run: npm run build
+
+      # The hand-built client demo sites and downloads live outside the Next
+      # app. Copy them in without clobbering anything Next generated.
+      - name: Add demo sites and downloads
         run: |
-          mkdir -p out
-          cp index.html out/
-          cp styles.css out/
-          cp script.js out/
-          cp blog.html out/
-          cp privacy.html out/
-          cp resume.pdf out/
-          cp -r blog out/
-          cp -r images out/
-          cp -r websites out/
-          cp -r barber out/
-          cp -r restaurant out/
-          cp -r realtor out/
-          cp -r product out/
+          for d in websites barber restaurant realtor product blog images; do
+            [ -d "$d" ] && cp -Rn "$d" out/ || true
+          done
+          for f in resume.pdf privacy.html blog.html; do
+            [ -f "$f" ] && cp -n "$f" out/ || true
+          done
           touch out/.nojekyll
 
       - name: Upload artifact
